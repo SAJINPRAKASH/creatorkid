@@ -26,6 +26,14 @@ pastel watercolor splashes in purple and pink appear subtly around the edges.`,
 WOMEN (Focus on Woman)
 Create a soft, romantic hand-drawn digital illustration of an Indian couple sitting at a café table. The woman is scolding the man with a loving, playful smile on her face. The woman is wearing a teal blue glittering saree. The man is seen from behind wearing a teal shirt. Minimalist watercolor and ink sketch style, loose expressive line art, soft muted teal and sage green color palette, painterly brush strokes, gentle lighting, intimate mood, cinematic framing, sketchbook aesthetic, dreamy and emotional atmosphere, high detail facial expressions, Instagram art style, 4K quality`,
         image: "assets/images/687382745_18095615789162816_4390036812084512780_n.jpg"
+    },
+    {
+        id: "CK003",
+        title: "men",
+        category: "Portrait",
+        description: "afdfsdf",
+        promptText: "Hyper-realistic overhead 9:16 close-up of myself with glasses, playfully leaning against an ivy-covered stone wall of an old countryside cottage during golden hour. I'm laughing with my head slightly tilted back, one hand brushing away a dangling vine, wearing a textured earth-tone knit sweater layered over a soft white t-shirt. The flowering vines are in full bloom with orange, magenta, and lavender hues, softly blurred in the foreground.",
+        image: "assets/images/548773615_18525925240010287_4350285369306324642_n.jpg"
     }
 ];
 
