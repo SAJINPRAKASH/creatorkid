@@ -68,13 +68,40 @@ class DataManager:
     
     def _js_to_json(self, js_str: str) -> str:
         """Convert JavaScript object notation to JSON"""
-        # Remove trailing commas
+        # Step 1: Extract all string literals (backtick, double-quote, single-quote)
+        # to protect their contents from regex transformations.
+        placeholders = {}
+        counter = [0]
+
+        def extract_string(m):
+            key = f'__STR{counter[0]}__'
+            counter[0] += 1
+            # Convert backtick strings to JSON double-quoted strings
+            raw = m.group(0)
+            if raw.startswith('`'):
+                inner = raw[1:-1]
+                # Escape backslashes and double-quotes inside for JSON
+                inner = inner.replace('\\', '\\\\').replace('"', '\\"')
+                placeholders[key] = f'"{inner}"'
+            else:
+                placeholders[key] = raw
+            return key
+
+        # Match backtick strings, double-quoted strings, single-quoted strings
+        pattern = r'`[^`\\]*(?:\\.[^`\\]*)*`|"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\''
+        js_str = re.sub(pattern, extract_string, js_str, flags=re.DOTALL)
+
+        # Step 2: Remove trailing commas
         json_str = re.sub(r',\s*}', '}', js_str)
         json_str = re.sub(r',\s*]', ']', json_str)
-        
-        # Add quotes to unquoted keys
+
+        # Step 3: Add quotes to unquoted object keys
         json_str = re.sub(r'([{,]\s*)([a-zA-Z0-9_]+)\s*:', r'\1"\2":', json_str)
-        
+
+        # Step 4: Re-insert placeholders (restore string literals)
+        for ph, val in placeholders.items():
+            json_str = json_str.replace(ph, val)
+
         return json_str
     
     def write_js_file(self, data: Dict[str, List[Dict]]) -> bool:

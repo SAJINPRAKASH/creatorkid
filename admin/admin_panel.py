@@ -74,6 +74,7 @@ class AdminPanel:
             ('category', 'Category', 'dropdown'),
             ('description', 'Description', 'text'),
             ('promptText', 'Prompt Text', 'text'),
+            ('image', 'Preview Image (shows how output looks)', 'image'),
         ])
     
     def create_resources_tab(self):
@@ -283,10 +284,10 @@ class AdminPanel:
                 if section in data:
                     for item in data[section]:
                         item_id = item.get('id', 'N/A')
-                        item_category = item.get('category', 'N/A')
+                        item_category = item.get('category') or '-'
                         display_name = (item.get('title') or 
                                         item.get('name') or 
-                                        item.get('excerpt', 'N/A'))
+                                        item.get('excerpt') or 'N/A')
                         
                         # Apply search filter
                         if search_term:
@@ -294,8 +295,10 @@ class AdminPanel:
                                 search_term not in str(item_category).lower() and
                                 search_term not in str(display_name).lower()):
                                 continue
-                                
-                        tree.insert('', tk.END, iid=item_id, values=(item_id, item_category, display_name))
+                        
+                        # Use a safe iid that avoids tkinter conflicts
+                        safe_iid = str(item_id)
+                        tree.insert('', tk.END, iid=safe_iid, values=(item_id, item_category, display_name))
         except Exception as e:
             print(f"Error refreshing list: {e}")
             messagebox.showerror("Error", f"Error refreshing list: {e}")
