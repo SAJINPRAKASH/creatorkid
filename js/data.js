@@ -3,18 +3,12 @@
 const prompts = [
     {
         id: "CK001",
-        title: "remo",
+        title: "",
         category: "Portrait",
         description: "",
-        promptText: `A romantic impressionist watercolor painting of a young couple standing close together in an
-intimate pose. The girl has long dark flowing hair with a small purple flower tucked near her ear,
-wearing a bright magenta dress that softly blends into the watercolor texture. The boy is dressed in
-a simple white shirt. The painting style is loose, blurry, and emotional, with soft brush strokes,
-smudged edges, and a dreamy unfinished look. The watercolor effect should feel expressive and
-fluid, with gentle color bleeding and natural paper texture visible. Background is minimal — plain
-textured beige paper like vintage parchment, with large empty negative space above the couple.
-The couple is positioned at the bottom-right corner of the frame, leaving wide space for text. Soft
-pastel watercolor splashes in purple and pink appear subtly around the edges.`,
+        promptText: `Create a sott, romantic hand-drawn digital illustration of an Indian couple sitting at a café table. The man is smiling warmly at the woman across from him, wearing a teal blue shirt. The woman is seen from behind wearing a teal glittering saree. Minimalist watercolor and ink sketch style, loose expressive line art, soft muted teal and sage green color palette, painterly brush strokes, gentle lighting, intimate mood, cinematic framing, sketchbook aesthetic, dreamy and emotional atmosphere, high detail facial expressions, Instagram art style, 4K quality
+WOMEN (Focus on Woman)
+Create a soft, romantic hand-drawn digital illustration of an Indian couple sitting at a café table. The woman is scolding the man with a loving, playful smile on her face. The woman is wearing a teal blue glittering saree. The man is seen from behind wearing a teal shirt. Minimalist watercolor and ink sketch style, loose expressive line art, soft muted teal and sage green color palette, painterly brush strokes, gentle lighting, intimate mood, cinematic framing, sketchbook aesthetic, dreamy and emotional atmosphere, high detail facial expressions, Instagram art style, 4K quality`,
         image: ""
     }
 ];
