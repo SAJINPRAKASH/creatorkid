@@ -20,7 +20,7 @@ pastel watercolor splashes in purple and pink appear subtly around the edges.`,
     {
         id: "CK002",
         title: "afafsfsdf",
-        category: "Marketing",
+        category: "Portrait",
         description: "dadad",
         promptText: `Create a sott, romantic hand-drawn digital illustration of an Indian couple sitting at a café table. The man is smiling warmly at the woman across from him, wearing a teal blue shirt. The woman is seen from behind wearing a teal glittering saree. Minimalist watercolor and ink sketch style, loose expressive line art, soft muted teal and sage green color palette, painterly brush strokes, gentle lighting, intimate mood, cinematic framing, sketchbook aesthetic, dreamy and emotional atmosphere, high detail facial expressions, Instagram art style, 4K quality
 WOMEN (Focus on Woman)
