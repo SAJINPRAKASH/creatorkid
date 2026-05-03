@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - CreatorKid</title>
+    <meta name="description" content="Free downloads and resources for creators.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                Creator<span>Kid</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="prompts.html">Prompts</a></li>
+                <li><a href="downloads.html" class="active">Downloads</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-cta">Join Now</a>
+                <button class="hamburger"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1>Free <span class="text-gradient">Downloads</span></h1>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto 0;">Start building your creator business with these free assets.</p>
+            </div>
+
+            <!-- Ad Area -->
+            <div class="ad-banner">
+                <span>AdSense Inline Area (728x90)</span>
+            </div>
+
+            <!-- Downloads Grid (Reusing Resource Cards) -->
+            <div class="grid grid-3" id="downloads-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                &copy; 2024 CreatorKid. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('downloads-grid');
+            
+            // Reusing the resources array for downloads, filtering to only show specific ones if needed.
+            // For now, let's just display all resources sorted by downloads.
+            const sortedDownloads = [...resources].sort((a, b) => b.downloads - a.downloads);
+            
+            if(container) {
+                container.innerHTML = sortedDownloads.map(renderResourcesCard).join('');
+            }
+        });
+    </script>
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#" class="btn btn-cta">Get Freebies</a>
+    </div>
+
+</body>
+</html>

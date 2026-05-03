@@ -1,0 +1,7 @@
+# No external dependencies required for core functionality
+# tkinter comes built-in with Python
+# git command-line tool must be installed separately
+
+# Optional: For future enhancements
+# Pillow==9.5.0  # For image processing
+# PyYAML==6.0    # For YAML support

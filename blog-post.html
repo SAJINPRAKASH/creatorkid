@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - CreatorKid</title>
+    <meta name="description" content="Read our latest blog posts about content creation, tools, and creator economy insights.">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                Creator<span>Kid</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="prompts.html">Prompts</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-cta">Join Now</a>
+                <button class="hamburger"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Blog Post Content -->
+        <section class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+            <article id="blog-post-content">
+                <!-- Content will be populated by JavaScript -->
+            </article>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="container" style="padding-bottom: 4rem;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">More Articles</h2>
+            <div class="grid grid-3" id="related-posts">
+                <!-- Related posts will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                        Creator<span>Kid</span>
+                    </a>
+                    <p style="color: var(--text-muted); max-width: 300px;">Empowering modern creators with the best
+                        tools, prompts, and assets to build their digital empire.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="prompts.html">AI Prompts</a>
+                        <a href="resources.html">Presets & Filters</a>
+                        <a href="resources.html">Templates</a>
+                        <a href="downloads.html">Free Downloads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 CreatorKid. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get blog post ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+
+            if (postId) {
+                const post = blogPosts.find(p => p.id === postId);
+                if (post) {
+                    displayBlogPost(post);
+                    displayRelatedPosts(post.id);
+                } else {
+                    displayNotFound();
+                }
+            } else {
+                displayNotFound();
+            }
+
+            // Initialize navbar
+            initNavbar();
+        });
+
+        function displayBlogPost(post) {
+            const contentContainer = document.getElementById('blog-post-content');
+            contentContainer.innerHTML = `
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <img src="${post.image}" alt="${post.title}" style="width: 100%; max-width: 800px; height: 400px; object-fit: cover; border-radius: 1rem; margin-bottom: 2rem;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Published on ${post.date}</p>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">${post.title}</h1>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem;">
+                    ${post.content}
+                </div>
+            `;
+
+            // Update page title
+            document.title = `${post.title} - CreatorKid`;
+        }
+
+        function displayRelatedPosts(currentId) {
+            const relatedContainer = document.getElementById('related-posts');
+            const relatedPosts = blogPosts.filter(p => p.id !== currentId).slice(0, 3);
+            relatedContainer.innerHTML = relatedPosts.map(post => `
+                <div class="card fade-in">
+                    <div class="card-img-wrapper">
+                        <img src="${post.image}" alt="${post.title}" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-id">${post.date}</div>
+                        <h3 class="card-title" style="font-size: 1.1rem;">${post.title}</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            ${post.excerpt}
+                        </p>
+                        <a href="blog-post.html?id=${post.id}" class="text-highlight" style="margin-top: auto; font-size: 0.9rem; font-weight: 600;">Read More <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function displayNotFound() {
+            const contentContainer = document.getElementById('blog-post-content');
+            contentContainer.innerHTML = `
+                <div style="text-align: center; padding: 4rem 0;">
+                    <h1>Blog Post Not Found</h1>
+                    <p style="color: var(--text-muted); margin: 2rem 0;">The blog post you're looking for doesn't exist.</p>
+                    <a href="blog.html" class="btn btn-primary">Back to Blog</a>
+                </div>
+            `;
+        }
+
+        // Navbar functions (copied from app.js)
+        function initNavbar() {
+            const navbar = document.querySelector('.navbar');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.style.background = 'rgba(11, 15, 25, 0.95)';
+                        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
+                    } else {
+                        navbar.style.background = 'rgba(11, 15, 25, 0.8)';
+                        navbar.style.boxShadow = 'none';
+                    }
+                });
+            }
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    hamburger.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>

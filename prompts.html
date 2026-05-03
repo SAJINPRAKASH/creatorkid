@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Library - CreatorKid</title>
+    <meta name="description" content="Copy and paste high-converting AI prompts for ChatGPT, Midjourney, marketing, and more.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                Creator<span>Kid</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="prompts.html" class="active">Prompts</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-cta">Join Now</a>
+                <button class="hamburger"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1>Prompt <span class="text-gradient">Library</span></h1>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto 0;">The ultimate collection of copy-and-paste prompts for AI tools.</p>
+            </div>
+
+            <!-- Search -->
+            <div class="search-container fade-in">
+                <i class="fas fa-search"></i>
+                <input type="text" id="prompt-search" class="search-input" placeholder="Search prompts by keyword or ID (e.g., CK001)...">
+            </div>
+
+            <!-- Filters -->
+            <div class="filters fade-in" style="animation-delay: 0.1s;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="freelance">Freelance</button>
+                <button class="filter-btn" data-filter="content">Content</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="sales">Sales</button>
+            </div>
+
+            <!-- Prompt Grid -->
+            <div class="grid grid-3" id="prompts-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                &copy; 2024 CreatorKid. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/prompts.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('prompts-grid');
+            
+            // Initial Render
+            renderItems(prompts, container, renderPromptCard);
+
+            // Setup Search
+            setupSearch('#prompt-search', renderPromptCard, prompts, '#prompts-grid');
+
+            // Setup Filters
+            setupFilters('.filter-btn', '.prompt-card', '#prompts-grid');
+        });
+    </script>
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#" class="btn btn-cta">Get Freebies</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - CreatorKid</title>
+    <meta name="description" content="Browse and discover the best free and premium AI tools for your creative projects.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                Creator<span>Kid</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="prompts.html">Prompts</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-cta">Join Now</a>
+                <button class="hamburger"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1>AI Tools <span class="text-gradient">Directory</span></h1>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto 0;">Discover the most powerful AI tools to supercharge your content creation.</p>
+            </div>
+
+            <!-- Search -->
+            <div class="search-container fade-in">
+                <i class="fas fa-search"></i>
+                <input type="text" id="ai-tool-search" class="search-input" placeholder="Search AI tools by name, category, or ID (e.g., AI001)...">
+            </div>
+
+            <!-- Filters -->
+            <div class="filters fade-in" style="animation-delay: 0.1s;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="text">Text Generation</button>
+                <button class="filter-btn" data-filter="image">Image Generation</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="workflow">Workflow</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+            </div>
+
+            <!-- Ad Area -->
+            <div class="ad-banner">
+                <span>AdSense Inline Area (728x90)</span>
+            </div>
+
+            <!-- AI Tools Grid -->
+            <div class="grid grid-3" id="ai-tools-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                &copy; 2024 CreatorKid. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('ai-tools-grid');
+            
+            // Initial Render
+            renderItems(aiTools, container, renderAIToolCard);
+
+            // Setup Search
+            setupSearch('#ai-tool-search', renderAIToolCard, aiTools, '#ai-tools-grid');
+
+            // Setup Filters
+            setupFilters('.filter-btn', '.ai-tool-card', '#ai-tools-grid');
+        });
+    </script>
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#" class="btn btn-cta">Get Freebies</a>
+    </div>
+
+</body>
+</html>
