@@ -76,12 +76,16 @@ class DataManager:
         def extract_string(m):
             key = f'__STR{counter[0]}__'
             counter[0] += 1
-            # Convert backtick strings to JSON double-quoted strings
             raw = m.group(0)
             if raw.startswith('`'):
                 inner = raw[1:-1]
-                # Escape backslashes and double-quotes inside for JSON
-                inner = inner.replace('\\', '\\\\').replace('"', '\\"')
+                # Escape backslashes, double-quotes, newlines, and carriage returns inside for JSON
+                inner = inner.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r')
+                placeholders[key] = f'"{inner}"'
+            elif raw.startswith("'"):
+                inner = raw[1:-1]
+                # Convert single quotes to double quotes, so unescape single quotes and escape double quotes
+                inner = inner.replace("\\'", "'").replace('"', '\\"')
                 placeholders[key] = f'"{inner}"'
             else:
                 placeholders[key] = raw
