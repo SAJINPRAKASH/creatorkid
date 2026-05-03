@@ -25,7 +25,7 @@ SUPPORTED_FORMATS = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 
 # Category options for dropdowns
 CATEGORY_OPTIONS = {
-    'prompts': ['Marketing', 'Freelance', 'Content', 'Video', 'Sales', 'Growth'],
+    'prompts': ['Marketing', 'Freelance', 'Content', 'Video', 'Sales', 'ImageGen', 'Portrait'],
     'resources': ['Presets', 'Fonts', 'Templates', 'Filters', 'Tools', 'Brushes', 'Gradients', 'Mockups'],
     'aiTools': ['Text Generation', 'Image Generation', 'Workflow', 'Marketing', 'Analytics'],
     'blogPosts': ['Strategy', 'AI', 'Tools', 'Creator Economy', 'Growth']
