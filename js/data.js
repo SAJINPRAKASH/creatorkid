@@ -71,6 +71,16 @@ Create a cinematic outdoor portrait in a green natural background with soft blur
 Above her hand is a realistic dandelion seed (അപ്പൂപ്പൻതാടി) with a small brown center and fine white fibers, light and natural, no glow or fantasy effect.
 She wears a black sleeveless V-neck top, gold round earrings, black and red bangles, a simple chain, and a small black bindi. Long black wavy hair flows naturally with a few loose strands.`,
         image: "assets/images/ChatGPT Image May 5, 2026, 10_26_24 AM.png"
+    },
+    {
+        id: "CK008",
+        title: "Bold Garage Bike Racer Portrait",
+        category: "Portrait",
+        description: "A moody full-body portrait of a young woman leaning against a chrome Royal Enfield cafe racer in a gritty parking garage, styled with edgy streetwear and quiet confidence.",
+        promptText: `Photorealistic full-body shot of a young girl of this uploaded picture casually leaning against a classic A Royal Enfield Continental GT 650 cafe racer motorcycle in the "Mister Clean" finish. The bike features a highly reflective, polished chrome fuel tank with gold pinstriping and the classic Royal Enfield badge. It has a flat black cafe racer bench seat, black side panels with gold detailing, and a black tubular frame. The exposed twin-cylinder engine features polished chrome side casings and black cooling fins, leading into dual chrome upswept exhaust pipes on either side. It is equipped with wire-spoke wheels featuring black rims, black clip-on handlebars with round bar-end mirrors, a classic round headlight with amber turn signals, and black front and rear fenders black and chrome motorcycle.
+
+She is wearing a black hoodie with white flame graphics, loose light blue jeans, and white sneakers. The setting is an indoor concrete parking garage with white pillars, corrugated metal walls, and a red "EXIT" sign in the background. She has a moody bold expression. She has a ponytail with a few sleek strands falling across the front. Makeup is soft and glowy with prominent rosy blush and matching nude lips.`,
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_30_17 AM.png"
     }
 ];
 
