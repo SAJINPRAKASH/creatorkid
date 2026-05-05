@@ -43,7 +43,7 @@ Create a soft, romantic hand-drawn digital illustration of an Indian couple sitt
         promptText: `Ultra-realistic black and white cinematic portrait collage of a young Indian woman. Traditional elegant look with soft natural beauty. She has long dark hair, small bindi on forehead, and is wearing ethnic outfit with detailed embroidery.
 Frame 1 (top): close-up side profile with eyes closed, soft smile, calm peaceful expression, soft diffused lighting.
 Frame 2 (middle): intense eye-level close-up, looking directly at camera, partially covering face with embroidered dupatta, focus on expressive eyes.`,
-        image: "assets/images/ChatGPT Image May 5, 2026, 10_00_48 AM.png"
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_13_25 AM.png"
     }
 ];
 
