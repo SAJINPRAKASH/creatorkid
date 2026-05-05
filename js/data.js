@@ -31,7 +31,7 @@ Create a soft, romantic hand-drawn digital illustration of an Indian couple sitt
         id: "CK003",
         title: "Golden Hour Joy",
         category: "Portrait",
-        description: ": A carefree smile captured against a blooming ivy wall, glowing in warm sunset light.",
+        description: "A carefree smile captured against a blooming ivy wall, glowing in warm sunset light.",
         promptText: "Hyper-realistic overhead 9:16 close-up of myself with glasses, playfully leaning against an ivy-covered stone wall of an old countryside cottage during golden hour. I'm laughing with my head slightly tilted back, one hand brushing away a dangling vine, wearing a textured earth-tone knit sweater layered over a soft white t-shirt. The flowering vines are in full bloom with orange, magenta, and lavender hues, softly blurred in the foreground.",
         image: "assets/images/ChatGPT Image May 5, 2026, 09_52_56 AM.png"
     }
