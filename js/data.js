@@ -81,6 +81,26 @@ She wears a black sleeveless V-neck top, gold round earrings, black and red bang
 
 She is wearing a black hoodie with white flame graphics, loose light blue jeans, and white sneakers. The setting is an indoor concrete parking garage with white pillars, corrugated metal walls, and a red "EXIT" sign in the background. She has a moody bold expression. She has a ponytail with a few sleek strands falling across the front. Makeup is soft and glowy with prominent rosy blush and matching nude lips.`,
         image: "assets/images/ChatGPT Image May 5, 2026, 10_30_17 AM.png"
+    },
+    {
+        id: "CK009",
+        title: "Golden Ethnic Collage Glow",
+        category: "Portrait",
+        description: "A dreamy three-frame vertical collage capturing sunlit elegance through flowing hair, expressive portraits, and intricate mehndi details in warm golden tones.",
+        promptText: `Aesthetic vertical 9:16 collage portrait of a young South Asian woman in warm golden ethnic attire, captured in three stacked frames with soft natural sunlight casting window shadow patterns on a beige wall. The overall mood is dreamy, editorial, and Pinterest-inspired with a warm golden glow.
+
+In the top frame, a close-up side profile captures the woman adjusting her large traditional jhumka earring with both hands. Her hands are adorned with dark mehndi (henna), and she is wearing multiple gold bangles. Her face is partially hidden, keeping the focus on the hands, jewelry, and natural motion.
+
+In the middle frame, a soft portrait shows the woman facing slightly toward the camera with a gentle, confident smile. Her long, slightly wavy black hair flows naturally across her face. She is wearing heavy gold statement earrings, and the sunlight creates dramatic highlights and soft shadows, enhancing her facial features.
+
+In the bottom frame, a close-up of her hand raised gracefully in sunl ight highlights the intricate mehndi design and stacked gold bangles. Strong window shadow lines fall across her arm and the background, adding depth and visual interest.
+
+The lighting features warm natural sunlight with a golden hour feel, combined with strong geometric window shadow patterns. The background is a soft beige or cream wall, creating a clean and minimal base with a high-contrast interplay of light and shadow.
+
+Styling includes a golden or peach ethnic outfit with subtle embroidery, paired with heavy gold jhumkas and multiple bangles. Her hair is styled loosely with a slightly messy, natural flow, and her makeup is minimal with glowing skin and natural tones. The mood remains candid, soft, and editorial throughout.
+
+The composition follows a vertical 9:16 ratio with three stacked frames in a collage layout. It combines close-up and mid-shot perspectives, focusing on hands, jewelry, and facial expression. The overall style reflects editorial fashion photography with a stro ng aesthetic appeal.`,
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_33_30 AM.png"
     }
 ];
 
