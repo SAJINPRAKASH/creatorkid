@@ -5,7 +5,7 @@ const prompts = [
         id: "CK001",
         title: "A Dreamy Watercolor Embrace",
         category: "Portrait",
-        description: "A dreamy watercolor of a romantic couple in a tender embrace. Featuring soft brushstrokes, a flowing magenta dress, and a vintage parchment background, the artwork is framed in the bottom corner to leave ample empty space.",
+        description: "Dreamy watercolor of a romantic couple embracing, with soft brushstrokes, a flowing magenta dress, and a vintage parchment background—framed in one corner with plenty of empty space.",
         promptText: `A romantic impressionist watercolor painting of a young couple standing close together in an
 intimate pose. The girl has long dark flowing hair with a small purple flower tucked near her ear,
 wearing a bright magenta dress that softly blends into the watercolor texture. The boy is dressed in
