@@ -60,6 +60,17 @@ Frame 2 (middle): intense eye-level close-up, looking directly at camera, partia
         description: "An ultra-realistic upward-angled close-up capturing untouched facial detail, with flowing black hair casting shadows and a subtle traditional elegance.",
         promptText: "Preserve the original person’s identity with extreme accuracy (100% likeness to the reference image). The face must remain exactly the same as the reference image, including real facial structure, proportions, skin tone, eyes, nose, lips, jawline, hairline, and all natural details. Do not alter, beautify, stylize, enhance, or modify the face in any way. No symmetry correction, no smoothing, no reshaping, no AI-like skin. The output must look like the same real person from the reference image. Apply the following style: An extreme close-up headshot, angled slightly upwards from eye-level, focusing on the subject's face from mid-forehead to just below the lips, with parts of the shoulders and collarbone visible on the lower left. Apply a slender and delicate build to the subject. The subject's head is tilted significantly towards their right (viewer’s left) and slightly backward with their gaze directed upwards and slightly to their left (viewer’s right), looking directly into the camera from this tilted angle. Long, pure black hair, natural and deep in tone, falls forward across the face in numerous strands, creating intricate shadow patterns over the eyes, nose, and forehead. The hair appears slightly textured and disheveled, yet styled to frame the face. The subject is wearing a sleeveless white lehenga blouse, minimal and elegant in appearance, with a simple chain on the neck. A small black bindi is placed at the center of the forehead, clearly visible and naturally integrated. Lighting is natural and soft with cinematic depth, emphasizing real skin texture and facial detail. Maintain a highly realistic, non-stylized photographic finish.",
         image: "assets/images/ChatGPT Image May 5, 2026, 10_23_11 AM.png"
+    },
+    {
+        id: "CK007",
+        title: "Dreamy Dandelion Gaze Portrait",
+        category: "Portrait",
+        description: "A natural outdoor close-up of a smiling woman gently gazing at a delicate dandelion seed above her palm, captured with soft cinematic realism.",
+        promptText: `Preserve the original person’s identity exactly as in the reference image, with 100% accuracy. Do not change face shape, skin tone, features, or expression. No beautification, smoothing, or AI enhancement.
+Create a cinematic outdoor portrait in a green natural background with soft blur. Frame is medium close-up from forehead to collarbone, with the subject slightly turned left in a gentle side pose. She has a natural bright smile and a calm, dreamy expression, looking at a floating object above her open palm.
+Above her hand is a realistic dandelion seed (അപ്പൂപ്പൻതാടി) with a small brown center and fine white fibers, light and natural, no glow or fantasy effect.
+She wears a black sleeveless V-neck top, gold round earrings, black and red bangles, a simple chain, and a small black bindi. Long black wavy hair flows naturally with a few loose strands.`,
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_26_24 AM.png"
     }
 ];
 
