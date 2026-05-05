@@ -44,6 +44,14 @@ Create a soft, romantic hand-drawn digital illustration of an Indian couple sitt
 Frame 1 (top): close-up side profile with eyes closed, soft smile, calm peaceful expression, soft diffused lighting.
 Frame 2 (middle): intense eye-level close-up, looking directly at camera, partially covering face with embroidered dupatta, focus on expressive eyes.`,
         image: "assets/images/ChatGPT Image May 5, 2026, 10_13_25 AM.png"
+    },
+    {
+        id: "CK005",
+        title: "Graceful Saree Twirl Portrait",
+        category: "Portrait",
+        description: "A radiant young woman mid-twirl on sunlit steps, her flowing hair and ivory saree catching warm light as she smiles with effortless elegance.",
+        promptText: "Use uploaded image create a portrait of a smiling young woman in mid-twirl walking down sunlit stone steps, three-quarter turn torward the camera, long wavy hair flowing with motion and warm rim light highlighting the strands; she wears and elegant ivory saree with delicate silver brocade border and subtle paisley motifs, paired with a fitted silver blouse, traditional jhumka earrings, simple necklace, stacked gold bangles and a smile bindi, natural glowing makeup and soft smile conveying grace 1/2",
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_16_35 AM.png"
     }
 ];
 
