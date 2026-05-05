@@ -137,3 +137,13 @@ function renderAIToolCard(item) {
         </div>
     `;
 }
+
+// Utility for deep-linking: get initial data based on ?id= parameter
+function getInitialData(dataArray) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = urlParams.get('id');
+    if (idParam && dataArray) {
+        return dataArray.filter(item => item.id && item.id.toLowerCase() === idParam.toLowerCase());
+    }
+    return dataArray;
+}

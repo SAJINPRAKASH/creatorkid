@@ -30,9 +30,10 @@ function renderPromptCard(item) {
                 </button>
             </div>
             
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: auto;">
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: auto; gap: 0.5rem;">
+                <a href="prompt-details.html?id=${item.id}" class="text-highlight" style="margin-right: auto; font-size: 0.9rem; font-weight: 600;">View Details <i class="fas fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
                 <button class="btn btn-outline" onclick="copyPrompt('${item.id}')" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                    <i class="far fa-copy"></i> Copy Prompt
+                    <i class="far fa-copy"></i> Copy
                 </button>
             </div>
         </div>

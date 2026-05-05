@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Details - CreatorKid</title>
+    <meta name="description" content="View AI prompt details.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .prompt-detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Make the expanded text look better in detail view */
+        .prompt-detail-container .prompt-text-container {
+            max-height: none;
+        }
+        .prompt-detail-container .prompt-text {
+            -webkit-line-clamp: unset;
+            max-height: none;
+        }
+        .prompt-detail-container .btn-icon[title="Expand"] {
+            display: none; /* Hide expand button on detail page since it's already fully expanded */
+        }
+        .back-button-container {
+            margin-bottom: 2rem;
+        }
+        .related-prompts-container {
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                Creator<span>Kid</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="prompts.html" class="active">Prompts</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://t.me/+yFJLDj00U0MyMmQ1" target="_blank" class="btn btn-cta"><i class="fab fa-telegram-plane"></i> Join Now</a>
+                <button class="hamburger"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+            <div class="prompt-detail-container">
+                <div class="back-button-container">
+                    <a href="prompts.html" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-arrow-left"></i> Back to Prompts
+                    </a>
+                </div>
+                
+                <div id="prompt-detail-content">
+                    <!-- Content will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Prompts -->
+        <section class="container" style="padding-bottom: 4rem;" id="related-prompts-section">
+            <h2 style="text-align: center; margin-bottom: 3rem;">More Prompts</h2>
+            <div class="grid grid-3" id="related-prompts">
+                <!-- Related posts will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <img src="assets/logo/logo_creator_kid.png" alt="Logo" class="nav-logo-img">
+                        Creator<span>Kid</span>
+                    </a>
+                    <p style="color: var(--text-muted); max-width: 300px;">Empowering modern creators with the best tools, prompts, and assets to build their digital empire.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="prompts.html">AI Prompts</a>
+                        <a href="resources.html">Presets & Filters</a>
+                        <a href="resources.html">Templates</a>
+                        <a href="downloads.html">Free Downloads</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 CreatorKid. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/prompts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const promptId = urlParams.get('id');
+
+            if (promptId) {
+                const prompt = prompts.find(p => p.id && p.id.toLowerCase() === promptId.toLowerCase());
+                if (prompt) {
+                    displayPromptDetail(prompt);
+                    displayRelatedPrompts(prompt.id, prompt.category);
+                } else {
+                    displayNotFound();
+                }
+            } else {
+                displayNotFound();
+            }
+        });
+
+        function displayPromptDetail(item) {
+            const contentContainer = document.getElementById('prompt-detail-content');
+            
+            // We use the existing renderPromptCard to keep the UI exactly the same
+            contentContainer.innerHTML = renderPromptCard(item);
+
+            // Update page title
+            document.title = \`\${item.title} - Prompt Library - CreatorKid\`;
+            
+            // Expand the text by default for detail view
+            const textElement = contentContainer.querySelector('.prompt-text');
+            if (textElement) {
+                textElement.style.webkitLineClamp = 'unset';
+                textElement.style.maxHeight = 'none';
+            }
+            
+            // Re-apply Toast function for the copy button if needed, but it's global in app.js
+        }
+
+        function displayRelatedPrompts(currentId, category) {
+            const relatedContainer = document.getElementById('related-prompts');
+            const section = document.getElementById('related-prompts-section');
+            
+            // Find related by category, excluding current, take 3
+            let related = prompts.filter(p => p.id !== currentId && p.category === category);
+            
+            // If not enough related, just add random ones
+            if (related.length < 3) {
+                const others = prompts.filter(p => p.id !== currentId && p.category !== category);
+                related = [...related, ...others].slice(0, 3);
+            } else {
+                related = related.slice(0, 3);
+            }
+
+            if (related.length > 0) {
+                relatedContainer.innerHTML = related.map(renderPromptCard).join('');
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        function displayNotFound() {
+            const contentContainer = document.getElementById('prompt-detail-content');
+            contentContainer.innerHTML = \`
+                <div style="text-align: center; padding: 4rem 0;">
+                    <h1 style="margin-bottom: 1rem;">Prompt Not Found</h1>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">The prompt you're looking for doesn't exist or has been removed.</p>
+                </div>
+            \`;
+            document.getElementById('related-prompts-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -25,7 +25,7 @@
                 <li><a href="blog.html" class="active">Blog</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#" class="btn btn-cta">Join Now</a>
+                <a href="https://t.me/+yFJLDj00U0MyMmQ1" target="_blank" class="btn btn-cta"><i class="fab fa-telegram-plane"></i> Join Now</a>
                 <button class="hamburger"><i class="fas fa-bars"></i></button>
             </div>
         </div>
@@ -74,14 +74,11 @@
             const container = document.getElementById('blog-grid');
             
             if(container) {
-                container.innerHTML = blogPosts.map(renderBlogCard).join('');
+                container.innerHTML = getInitialData(blogPosts).map(renderBlogCard).join('');
             }
         });
     </script>
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-sticky-cta">
-        <a href="#" class="btn btn-cta">Get Freebies</a>
-    </div>
+
 
 </body>
 </html>

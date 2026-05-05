@@ -196,6 +196,7 @@ class AdminPanel:
         ttk.Button(btn_frame, text="View", command=lambda: self.view_item(section)).pack(side=tk.LEFT, padx=2)
         ttk.Button(btn_frame, text="Edit", command=lambda: self.edit_item(section, fields)).pack(side=tk.LEFT, padx=2)
         ttk.Button(btn_frame, text="Delete", command=lambda: self.delete_item(section)).pack(side=tk.LEFT, padx=2)
+        ttk.Button(btn_frame, text="Copy Link", command=lambda: self.copy_link(section)).pack(side=tk.LEFT, padx=2)
         
         # Right panel - Form
         right_frame = ttk.Frame(tab)
@@ -650,6 +651,31 @@ class AdminPanel:
                 widget.file_path = str(value) if value else ""
 
         self.current_editing_id = item_id
+
+    def copy_link(self, section):
+        """Copy a direct link to the selected item"""
+        item_id = self._get_selected_item_id(section)
+        if not item_id:
+            messagebox.showwarning("Warning", "Please select an item to copy its link")
+            return
+            
+        pages = {
+            'prompts': 'prompts.html',
+            'resources': 'resources.html',
+            'aiTools': 'ai-tools.html',
+            'blogPosts': 'blog-post.html'
+        }
+        page = pages.get(section, 'index.html')
+        
+        # Build the URL
+        url = f"https://creatorkid.online/{page}?id={item_id}"
+        
+        # Copy to clipboard
+        self.root.clipboard_clear()
+        self.root.clipboard_append(url)
+        self.root.update() # Required for clipboard to update on some systems
+        
+        messagebox.showinfo("Copied!", f"Link copied to clipboard:\n\n{url}")
 
     def refresh_git_status(self):
         """Refresh git status display"""
