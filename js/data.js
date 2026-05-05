@@ -101,6 +101,38 @@ Styling includes a golden or peach ethnic outfit with subtle embroidery, paired 
 
 The composition follows a vertical 9:16 ratio with three stacked frames in a collage layout. It combines close-up and mid-shot perspectives, focusing on hands, jewelry, and facial expression. The overall style reflects editorial fashion photography with a stro ng aesthetic appeal.`,
         image: "assets/images/ChatGPT Image May 5, 2026, 10_33_30 AM.png"
+    },
+    {
+        id: "CK010",
+        title: "Flashlit Vintage Collage Portrait",
+        category: "Portrait",
+        description: "A warm amber-toned scrapbook collage of a young woman, captured in layered flash-lit panels with moody shadows, floral accents, and a nostalgic music player overlay.",
+        promptText: `Ultra-realistic cinematic collage of a young woman using the uploaded face exactly.
+The image is composed of multiple rectangular photo panels layered vertically and diagonally, creating a scrapbook-style layout. Each panel shows close-up and mid-shot portraits of the same girl in a dim indoor room.
+
+Lighting: strong, warm, golden-orange direct flash lighting hitting the face from the front-left, creating high contrast, deep shadows, and a glowing skin effect. Background remains dark with visible window curtains slightly illuminated. Harsh highlights on cheekbones, nose, and lips. Slight film grain and soft blur for a dreamy vintage feel.
+Color grading: intense amber, burnt orange, and golden tones dominating the entire image. High saturation, slightly crushed blacks, and glowing highlights.
+Subject styling: messy tied-back hair with loose strands falling on face, glossy lips, subtle eyeliner, dewy skin. Wearing a delicate necklace with small pendants and a casual white top.
+Composition details:
+Top panel: serious expression, looking directly at
+camera.
+Middle panel: cropped lips and necklace close-up.
+Bottom left: extreme close-up of eyes with strong shadow split across face.
+Bottom right: angled portrait with soft side gaze.
+Panels overlap slightly with uneven spacing for aesthetic collage look.
+Overlay elements:
+Add realistic flower stickers (lilies in orange, cream, and red tones) placed around the collage.
+Add a music player Ul card in the center-left area with a soft rounded design.
+Music player text:
+Title: “Pavazhamalli”
+Artist: “Devaa”
+Include minimal playback bar and icons (play/ pause, skip).
+Final touches:
+Slight glow/bloom effect on highlights
+Subtle vignette around edges
+Flash photography look, like taken on a digital camera at night
+Maintain natural skin texture, avoid over-smoothing`,
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_37_24 AM.png"
     }
 ];
 
