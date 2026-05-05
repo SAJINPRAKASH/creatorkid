@@ -34,6 +34,16 @@ Create a soft, romantic hand-drawn digital illustration of an Indian couple sitt
         description: "A carefree smile captured against a blooming ivy wall, glowing in warm sunset light.",
         promptText: "Hyper-realistic overhead 9:16 close-up of myself with glasses, playfully leaning against an ivy-covered stone wall of an old countryside cottage during golden hour. I'm laughing with my head slightly tilted back, one hand brushing away a dangling vine, wearing a textured earth-tone knit sweater layered over a soft white t-shirt. The flowering vines are in full bloom with orange, magenta, and lavender hues, softly blurred in the foreground.",
         image: "assets/images/ChatGPT Image May 5, 2026, 09_52_56 AM.png"
+    },
+    {
+        id: "CK004",
+        title: "Ethereal Indian Portrait Collage",
+        category: "Portrait",
+        description: "A cinematic black-and-white collage capturing a serene side profile and an intense gaze of a traditionally dressed Indian woman with soft elegance.",
+        promptText: `Ultra-realistic black and white cinematic portrait collage of a young Indian woman. Traditional elegant look with soft natural beauty. She has long dark hair, small bindi on forehead, and is wearing ethnic outfit with detailed embroidery.
+Frame 1 (top): close-up side profile with eyes closed, soft smile, calm peaceful expression, soft diffused lighting.
+Frame 2 (middle): intense eye-level close-up, looking directly at camera, partially covering face with embroidered dupatta, focus on expressive eyes.`,
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_00_48 AM.png"
     }
 ];
 
