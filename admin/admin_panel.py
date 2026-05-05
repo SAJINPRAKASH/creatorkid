@@ -660,7 +660,7 @@ class AdminPanel:
             return
             
         pages = {
-            'prompts': 'prompts.html',
+            'prompts': 'prompt-details.html',
             'resources': 'resources.html',
             'aiTools': 'ai-tools.html',
             'blogPosts': 'blog-post.html'

@@ -150,7 +150,7 @@
             contentContainer.innerHTML = renderPromptCard(item);
 
             // Update page title
-            document.title = \`\${item.title} - Prompt Library - CreatorKid\`;
+            document.title = `${item.title} - Prompt Library - CreatorKid`;
             
             // Expand the text by default for detail view
             const textElement = contentContainer.querySelector('.prompt-text');
@@ -186,12 +186,12 @@
 
         function displayNotFound() {
             const contentContainer = document.getElementById('prompt-detail-content');
-            contentContainer.innerHTML = \`
+            contentContainer.innerHTML = `
                 <div style="text-align: center; padding: 4rem 0;">
                     <h1 style="margin-bottom: 1rem;">Prompt Not Found</h1>
                     <p style="color: var(--text-muted); margin-bottom: 2rem;">The prompt you're looking for doesn't exist or has been removed.</p>
                 </div>
-            \`;
+            `;
             document.getElementById('related-prompts-section').style.display = 'none';
         }
     </script>
