@@ -52,6 +52,14 @@ Frame 2 (middle): intense eye-level close-up, looking directly at camera, partia
         description: "A radiant young woman mid-twirl on sunlit steps, her flowing hair and ivory saree catching warm light as she smiles with effortless elegance.",
         promptText: "Use uploaded image create a portrait of a smiling young woman in mid-twirl walking down sunlit stone steps, three-quarter turn torward the camera, long wavy hair flowing with motion and warm rim light highlighting the strands; she wears and elegant ivory saree with delicate silver brocade border and subtle paisley motifs, paired with a fitted silver blouse, traditional jhumka earrings, simple necklace, stacked gold bangles and a smile bindi, natural glowing makeup and soft smile conveying grace 1/2",
         image: "assets/images/ChatGPT Image May 5, 2026, 10_16_35 AM.png"
+    },
+    {
+        id: "CK006",
+        title: "Raw Identity Close-Up Portrait",
+        category: "Portrait",
+        description: "An ultra-realistic upward-angled close-up capturing untouched facial detail, with flowing black hair casting shadows and a subtle traditional elegance.",
+        promptText: "Preserve the original person’s identity with extreme accuracy (100% likeness to the reference image). The face must remain exactly the same as the reference image, including real facial structure, proportions, skin tone, eyes, nose, lips, jawline, hairline, and all natural details. Do not alter, beautify, stylize, enhance, or modify the face in any way. No symmetry correction, no smoothing, no reshaping, no AI-like skin. The output must look like the same real person from the reference image. Apply the following style: An extreme close-up headshot, angled slightly upwards from eye-level, focusing on the subject's face from mid-forehead to just below the lips, with parts of the shoulders and collarbone visible on the lower left. Apply a slender and delicate build to the subject. The subject's head is tilted significantly towards their right (viewer’s left) and slightly backward with their gaze directed upwards and slightly to their left (viewer’s right), looking directly into the camera from this tilted angle. Long, pure black hair, natural and deep in tone, falls forward across the face in numerous strands, creating intricate shadow patterns over the eyes, nose, and forehead. The hair appears slightly textured and disheveled, yet styled to frame the face. The subject is wearing a sleeveless white lehenga blouse, minimal and elegant in appearance, with a simple chain on the neck. A small black bindi is placed at the center of the forehead, clearly visible and naturally integrated. Lighting is natural and soft with cinematic depth, emphasizing real skin texture and facial detail. Maintain a highly realistic, non-stylized photographic finish.",
+        image: "assets/images/ChatGPT Image May 5, 2026, 10_23_11 AM.png"
     }
 ];
 
